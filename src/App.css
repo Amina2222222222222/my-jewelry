@@ -1,0 +1,226 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f9f5f0;
+}
+
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  padding: 40px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border-radius: 20px;
+  margin-bottom: 40px;
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h2 {
+  color: #764ba2;
+  margin-bottom: 15px;
+}
+
+.card p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.price {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #667eea;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+}
+/* Стили для формы */
+.task-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 40px;
+  justify-content: center;
+}
+
+.task-form input {
+  flex: 1;
+  max-width: 400px;
+  padding: 12px 20px;
+  border: 2px solid #ddd;
+  border-radius: 25px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.task-form input:focus {
+  border-color: #764ba2;
+}
+
+.task-form button {
+  padding: 12px 25px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: transform 0.2s;
+}
+
+.task-form button:hover {
+  transform: scale(1.02);
+}
+
+/* Стили для кнопки удаления */
+.delete-btn {
+  margin-top: 15px;
+  padding: 8px 15px;
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.delete-btn:hover {
+  background-color: #ee5a5a;
+}
+
+/* Сообщение, когда нет украшений */
+.empty-message {
+  text-align: center;
+  font-size: 1.2em;
+  color: #999;
+  padding: 50px;
+}
+/* Стили для навигации */
+.nav-menu {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+  padding: 8px 20px;
+  border-radius: 25px;
+  transition: background-color 0.3s;
+}
+
+.nav-menu a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Стили для страницы "О нас" */
+.about-page {
+  text-align: center;
+  padding: 40px;
+  background: white;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+.about-page h2 {
+  color: #764ba2;
+  margin-bottom: 20px;
+}
+
+.about-page p {
+  margin: 15px 0;
+  color: #555;
+  font-size: 1.1em;
+}
+/* Стили для API-списка задач */
+.task-list-api {
+  margin-top: 40px;
+  padding: 20px;
+  background: #f9f5f0;
+  border-radius: 15px;
+  text-align: left;
+}
+
+.task-list-api h3 {
+  color: #764ba2;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.task-list-api ul {
+  list-style: none;
+  padding: 0;
+}
+
+.task-list-api li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  margin: 8px 0;
+  background: white;
+  border-radius: 10px;
+  border-left: 4px solid #667eea;
+}
+
+.task-list-api li.completed {
+  border-left-color: #4caf50;
+  opacity: 0.7;
+}
+
+.status {
+  font-size: 0.85em;
+  color: #666;
+}
+
+.loading, .error {
+  text-align: center;
+  padding: 20px;
+  font-size: 1.1em;
+}
+
+.error {
+  color: #e53e3e;
+}
+.api-note {
+  font-size: 0.8em;
+  color: #999;
+  text-align: center;
+  margin-top: 15px;
+  font-style: italic;
+}
